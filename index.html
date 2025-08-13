@@ -4,109 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miaudote</title>
-    <!-- Fonte Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" 
-      rel="stylesheet"
-      crossorigin="anonymous">
-    <!-- Fonte Roboto-->
-     <meta http-equiv="X-Frame-Options" content="deny">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" crossorigin="anonymous">
+    <meta http-equiv="X-Frame-Options" content="deny">
     <meta http-equiv="Content-Security-Policy" content="
-    default-src 'self';
-    script-src 'self' 'unsafe-inline' https://*.github.io;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    img-src 'self' data: https:;
-    font-src 'self' https://fonts.gstatic.com;
-    connect-src 'self';
-    frame-src 'none';
-    object-src 'none';
-">
-     <meta name="referrer" content="strict-origin-when-cross-origin">
+        default-src 'self';
+        script-src 'self' 'unsafe-inline' https://*.github.io;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        img-src 'self' data: https:;
+        font-src 'self' https://fonts.gstatic.com;
+        connect-src 'self';
+        frame-src 'none';
+        object-src 'none';
+    ">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    
-    <!--Menu-->
-   <header>
-    <div class="container">
-        <div class="logo"><img src="img/logo.png" alt="logo"></div>
-        <nav>
-            <a href="#">Home</a>
-            <a href="#">Ajude uma ONG</a>
-            <a href="#">Adote</a>
-            <a href="#">Achados e perdidos</a>
-        </nav>
-    </div>
-</header>
+    <!-- Menu -->
+    <header>
+        <div class="container">
+            <div class="logo"><img src="img/logo.png" alt="logo"></div>
+            
+            <!-- Botão Hamburguer (visível apenas em mobile) -->
+            <div class="menu-toggle" id="mobileMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <!-- Menu de Navegação -->
+            <nav id="navMenu">
+                <button class="nav-btn">Home</button>
+                <button class="nav-btn">Ajude uma ONG</button>
+                <button class="nav-btn">Adote</button>
+                <button class="nav-btn">Achados e perdidos</button>
+            </nav>
+        </div>
+    </header>
 
-    <!--Chamada-->
+    <!-- Chamada -->
     <section id="chamada" class="container">
         <div class="texto-chamada">
-        <h1>Adote um gato.<br>Salve uma vida.</h1>
-        <h2>Dê um lar cheio de amor para <br> quem só precisa de uma <br> segunda chance.</h2>
-        <a href="" class="btn" onclick="rolar(event)">Conheça os gatinhos</a>
+            <h1>Adote um gato.<br>Salve uma vida.</h1>
+            <h2>Dê um lar cheio de amor para <br> quem só precisa de uma <br> segunda chance.</h2>
+            <a href="" class="btn" id="btnConheca">Conheça os gatinhos</a>
         </div>
         <div class="imagem-gato">
             <img src="img/gato.png" alt="">
         </div>
     </section>
 
-  <!-- Gatos para adoção -->
-<section id="adocao">
-    <h2>Gatinhos para adoção</h2>
+    <!-- Gatos para adoção -->
+    <section id="adocao">
+        <h2>Gatinhos para adoção</h2>
 
-    <div class="cards-adocao">
-        <!-- Card 1 -->
-        <div class="card">
-            <img src="img/gato1.jpg" alt="Gato Judite">
-            <div class="card-info">
-                <h3>Judite</h3>
-                <p>Freguesia do Ó, SP</p>
-                <p>1 hora atrás</p>
+        <div class="cards-adocao">
+            <!-- Card 1 -->
+            <div class="card">
+                <img src="img/gato1.jpg" alt="Gato Judite">
+                <div class="card-info">
+                    <h3>Judite</h3>
+                    <p>Freguesia do Ó, SP</p>
+                    <p>1 hora atrás</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="card">
+                <img src="img/gato2.jpg" alt="Gato Luna">
+                <div class="card-info">
+                    <h3>Luna</h3>
+                    <p>Vila Madalena, SP</p>
+                    <p>3 horas atrás</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="card">
+                <img src="img/gato3.jpg" alt="Gato Thor">
+                <div class="card-info">
+                    <h3>Thor</h3>
+                    <p>Pinheiros, SP</p>
+                    <p>Ontem</p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="card">
+                <img src="img/gato4.jpg" alt="Gato Mel">
+                <div class="card-info">
+                    <h3>Mel</h3>
+                    <p>Mooca, SP</p>
+                    <p>2 dias atrás</p>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Card 2 -->
-        <div class="card">
-            <img src="img/gato2.jpg" alt="Gato Luna">
-            <div class="card-info">
-                <h3>Luna</h3>
-                <p>Vila Madalena, SP</p>
-                <p>3 horas atrás</p>
-            </div>
-        </div>
+    <!-- Botão do WhatsApp -->
+    <a href="https://api.whatsapp.com/send?phone=5513981218828&text=Olá,%20tenho%20interesse%20em%20adotar%20um%20gatinho" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="WhatsApp">
+       <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white">
+         <path d="M17.5 14.3c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3m-5.4 7.4h-.004a9.9 9.9 0 01-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 01-1.5-5.3c0-5.4 4.4-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9a9.8 9.8 0 012.9 7c0 5.4-4.4 9.9-9.9 9.9m8.4-18.3A11.8 11.8 0 0012 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7a11.9 11.9 0 005.7 1.4h.005c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.3-6.1-3.5-8.4z"/>
+       </svg>
+    </a>
 
-        <!-- Card 3 -->
-        <div class="card">
-            <img src="img/gato3.jpg" alt="Gato Thor">
-            <div class="card-info">
-                <h3>Thor</h3>
-                <p>Pinheiros, SP</p>
-                <p>Ontem</p>
-            </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="card">
-            <img src="img/gato4.jpg" alt="Gato Mel">
-            <div class="card-info">
-                <h3>Mel</h3>
-                <p>Mooca, SP</p>
-                <p>2 dias atrás</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Botão do WhatsApp -->
-<a href="https://api.whatsapp.com/send?phone=5513981218828&text=Olá,%20tenho%20interesse%20em%20adotar%20um%20gatinho" 
-   class="whatsapp-float" 
-   target="_blank" 
-   rel="noopener noreferrer"
-   aria-label="WhatsApp">
-   <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white">
-     <path d="M17.5 14.3c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5-.2 0-.4 0-.6 0-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5 0 1.5 1.1 2.9 1.2 3.1.2.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.3m-5.4 7.4h-.004a9.9 9.9 0 01-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.9 9.9 0 01-1.5-5.3c0-5.4 4.4-9.9 9.9-9.9 2.6 0 5.1 1 7 2.9a9.8 9.8 0 012.9 7c0 5.4-4.4 9.9-9.9 9.9m8.4-18.3A11.8 11.8 0 0012 0C5.5 0 .2 5.3.2 11.9c0 2.1.5 4.1 1.6 5.9L.1 24l6.3-1.7a11.9 11.9 0 005.7 1.4h.005c6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.3-6.1-3.5-8.4z"/>
-   </svg>
-</a>
+    <script src="script.js"></script>
 </body>
 </html>
