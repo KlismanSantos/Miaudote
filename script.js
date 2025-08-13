@@ -9,7 +9,7 @@ function rolar(event) {
 function animarWhatsApp() {
     const btnWhats = document.querySelector('.whatsapp-float');
     
-    btnWhats.style.transform = 'scale(1.1)'; // Aumenta
+    btnWhats.style.transform = 'scale(1.1)';
     setTimeout(() => btnWhats.style.transform = 'scale(1)', 1000); 
 }
 
