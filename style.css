@@ -61,7 +61,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 0; /* Removemos o padding lateral aqui pois o container já tem */
+    padding: 2rem 0; 
     gap: 40px;
 }
 
@@ -213,13 +213,13 @@ nav a:hover {
     align-items: center;
     justify-content: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 9999; /* Valor extremamente alto */
+    z-index: 9999; 
     transition: all 0.3s ease;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    background-color: #128C7E; /* Cor mais escura no hover */
+    background-color: #128C7E; 
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
